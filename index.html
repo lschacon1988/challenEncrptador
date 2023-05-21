@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.x/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
@@ -13,30 +14,37 @@
 </head>
 
 <body>
-    <header>
-        <img class="logo" src="/img/Logo.png" alt="Logo">
-    </header>
-    <main>
-        <section>
-            <textarea id="text-area" class="text-area"  placeholder="Ingrese el texto aqui"></textarea>
-            <div>
-                <h6 class="info">Solo letras minúsculas y sin acentos</h6>
-            </div>
-            <div class="button">
-                <button id="btn-encriptar" class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+    <div class="container mx-auto">
+        <header >
+            <img class="logo" src="/img/Logo.png" alt="Logo">
+        </header>
+        <main >
+            <section >
+                <textarea id="text-area" class="text-area flex-1" placeholder="Ingrese el texto aqui"></textarea>
+                <div>
+                    <h6 class="info flex-1">Solo letras minúsculas y sin acentos</h6>
+                </div>
+                <div class="button flex-1">
+                    <button id="btn-encriptar" class="btn-encriptar rounded-full flex-1"
+                        onclick="btnEncriptar()">Encriptar</button>
 
-                <button onclick="btnDesencriptar()" id="btn-desencriptar" class="btn-desencriptar">Desencriptar</button>
-            </div>
-        </section>
-        <section>
-            <textarea id="mensaje" class="mensaje" cols="30" rows="10"></textarea>
-            <div>
-                <button onclick="btnCopy()"  id="btn-copiar" class="btn-copiar">Copiar</button>
-            </div>
-        </section>
-    </main>
+                    <button onclick="btnDesencriptar()" id="btn-desencriptar "
+                        class="btn-desencriptar rounded-full flex-1">Desencriptar</button>
+                </div>
+            </section>
+            <section >
+                <textarea id="mensaje" class="mensaje" cols="30" rows="10"></textarea>
+                <div>
+                    <button onclick="btnCopy()" id="btn-copiar" class="btn-copiar">Copiar</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
 
 </body>
+<script src="https://cdn.tailwindcss.com"></script>
 
 <script src="/index.js"></script>
 
